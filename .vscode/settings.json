@@ -1,4 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true
 }
