@@ -47,6 +47,7 @@ body {
   transform: translate(-50%, -50%);
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .heading-main {
@@ -65,6 +66,7 @@ body {
   display: block;
   animation-name: moveInRight;
   animation-duration: 1s;
+  margin-bottom: 40px;
 }
 
 @keyframes moveInLeft {
@@ -93,4 +95,27 @@ body {
     opacity: 100%;
     transform: translateX(0);
   }
+}
+
+.btn:link, 
+.btn:visited {
+text-decoration: none;
+padding: 10px 40px;
+display: inline-block;
+border-radius: 400px;
+transition: .2s;
+}
+
+.btn:hover{
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, .2);
+  transform: translateY(-3px);
+}
+.btn:active{
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);
+  transform: translateY(-1px);
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
 }
