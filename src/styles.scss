@@ -29,8 +29,8 @@ body {
 .header {
   clip-path: polygon(0 0, 100% 0%, 100% 70vh, 0 100%);
   height: 95vh;
-  background-image: linear-gradient(to bottom right, #7ed56fcc, #28b485cc);
-  //  url(../img/hero.jpg);
+  background-image: linear-gradient(to bottom right, #7ed56fcc, #28b485cc),
+    url(img/hero.jpg);
   background-size: cover;
   position: relative;
 }
