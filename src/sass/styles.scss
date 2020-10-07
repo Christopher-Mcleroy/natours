@@ -1,11 +1,9 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
+$color-primary-light: #7ed56f;
+$color-primary-medium: #55c57a;
+$color-primary-dark: #28b485;
+$color-primary-grey: #777;
+$color-primary-white: #fff;
+$color-primary-black: #000;
 
 * {
   padding: 0;
@@ -19,7 +17,7 @@ html {
 
 body {
   font-family: Lato, sans-serif;
-  color: #777;
+  color: $color-primary-grey;
   line-height: 1.7;
   padding: 3rem;
   font-size: 1.6rem;
@@ -29,8 +27,12 @@ body {
 .header {
   clip-path: polygon(0 0, 100% 0%, 100% 70vh, 0 100%);
   height: 95vh;
-  background-image: linear-gradient(to bottom right, #7ed56fcc, #28b485cc),
-    url(img/hero.jpg);
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
   background-size: cover;
   position: relative;
 }
@@ -50,7 +52,7 @@ body {
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: $color-primary-white;
   text-transform: uppercase;
   text-align: center;
 }
@@ -124,17 +126,17 @@ body {
 }
 
 .btn:hover {
-  box-shadow: 0px 2rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2rem 4rem rgba($color-primary-black, 0.2);
   transform: translateY(-3px);
 }
 .btn:active {
-  box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1rem 1rem rgba($color-primary-black, 0.2);
   transform: translateY(-1px);
 }
 
 .btn--white {
-  background-color: white;
-  color: #777;
+  background-color: $color-primary-white;
+  color: $color-primary-grey;
 }
 .btn--animated {
   animation: moveInBottem 0.4s ease-out 0.75s;
