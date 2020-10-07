@@ -35,45 +35,47 @@ body {
     url(../img/hero.jpg);
   background-size: cover;
   position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__heading-box {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    color: $color-primary-white;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+.heading-primary {
+  &--main {
+    letter-spacing: 3.5rem;
+    display: block;
+    font-weight: 400;
+    font-size: 6rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+  }
 
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__heading-box {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  color: $color-primary-white;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.heading--main {
-  letter-spacing: 3.5rem;
-  display: block;
-  font-weight: 400;
-  font-size: 6rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-}
-
-.heading--sub {
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  font-size: 2rem;
-  display: block;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  margin-bottom: 4rem;
+  &--sub {
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    font-size: 2rem;
+    display: block;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    margin-bottom: 4rem;
+  }
 }
 
 @keyframes moveInLeft {
@@ -116,29 +118,31 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  padding: 1rem 4rem;
-  display: inline-block;
-  border-radius: 40rem;
-  transition: 0.2s;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    padding: 1rem 4rem;
+    display: inline-block;
+    border-radius: 40rem;
+    transition: 0.2s;
+  }
 
-.btn:hover {
-  box-shadow: 0px 2rem 4rem rgba($color-primary-black, 0.2);
-  transform: translateY(-3px);
-}
-.btn:active {
-  box-shadow: 0px 1rem 1rem rgba($color-primary-black, 0.2);
-  transform: translateY(-1px);
-}
+  &:hover {
+    box-shadow: 0px 2rem 4rem rgba($color-primary-black, 0.2);
+    transform: translateY(-3px);
+  }
+  &:active {
+    box-shadow: 0px 1rem 1rem rgba($color-primary-black, 0.2);
+    transform: translateY(-1px);
+  }
 
-.btn--white {
-  background-color: $color-primary-white;
-  color: $color-primary-grey;
-}
-.btn--animated {
-  animation: moveInBottem 0.4s ease-out 0.75s;
-  animation-fill-mode: backwards;
+  &--white {
+    background-color: $color-primary-white;
+    color: $color-primary-grey;
+  }
+  &--animated {
+    animation: moveInBottem 0.4s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }
