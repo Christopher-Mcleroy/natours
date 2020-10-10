@@ -47,3 +47,15 @@ body {
       rgba($color: $color-primary-black, $alpha: 0.4);
   }
 }
+
+.paragraph-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
