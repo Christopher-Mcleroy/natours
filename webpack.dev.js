@@ -12,6 +12,18 @@ module.exports = {
   module: {
     rules: [
       { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+      {
+        test: /\.(eot|woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      },
       { test: /\.html$/, use: ['html-loader'] },
       {
         test: /\.(jpg|gif|png|mp4)$/,
@@ -22,7 +34,7 @@ module.exports = {
             outputPath: 'imgs',
           },
         },
-      },
+      }
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
