@@ -1,0 +1,22 @@
+.feature-box {
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 2.5rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color: $color-primary-black, $alpha: 0.15);
+  background-color: rgba($color: $color-primary-white, $alpha: 0.8);
+
+  &__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__text {
+  }
+}
