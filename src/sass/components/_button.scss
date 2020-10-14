@@ -7,6 +7,7 @@
     border-radius: 40rem;
     transition: 0.2s;
     position: relative;
+    text-transform: uppercase;
   }
 
   &:hover {
@@ -42,6 +43,14 @@
     color: $color-grey;
     &::after {
       background-color: $color-white;
+    }
+  }
+
+  &--primary {
+    background-color: $color-primary-medium;
+    color: $color-white;
+    &::after {
+      background-color: $color-primary-medium;
     }
   }
 
