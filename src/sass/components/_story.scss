@@ -1,8 +1,8 @@
 .story {
   width: 75%;
   padding: 6rem;
-  background-color: $color-white;
-  margin: 6rem auto;
+  background-color: rbga($color-white, 0.6);
+  margin: auto;
   padding-left: 9rem;
   transform: skewX(-9deg);
   box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -40,7 +40,7 @@
   &:hover img {
     transition: all 0.5s;
     backface-visibility: hidden;
-    filter: blur(8px);
+    filter: blur(8px) brightness(85%);
   }
 
   &__text {

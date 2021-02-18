@@ -19,14 +19,14 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
+              outputPath: 'fonts/',
+            },
+          },
+        ],
       },
       { test: /\.html$/, use: ['html-loader'] },
       {
-        test: /\.(jpg|gif|png|mp4)$/,
+        test: /\.(jpg|gif|png|mp4|webm)$/,
         use: {
           loader: 'file-loader',
           options: {
@@ -34,7 +34,7 @@ module.exports = {
             outputPath: 'imgs',
           },
         },
-      }
+      },
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
