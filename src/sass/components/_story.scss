@@ -1,9 +1,31 @@
 .story {
+  width: 75%;
+  padding: 6rem;
+  background-color: $color-white;
+  margin: 6rem auto;
+  padding-left: 9rem;
+  transform: skewX(-9deg);
+  box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.2);
+
   &__fig {
-    width: 9rem;
-    height: 9rem;
+    width: 12rem;
+    height: 12rem;
     clip-path: circle();
     float: left;
+    shape-outside: circle();
+    transform: translateX(-3rem);
+    position: relative;
+
+    figcaption {
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      text-align: center;
+      opacity: 0;
+    }
 
     img {
       height: 100%;
@@ -11,10 +33,23 @@
     }
   }
 
+  &:hover figcaption {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  &:hover img {
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    filter: blur(8px);
+  }
+
   &__text {
+    text-align: left;
   }
 
   &__title {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
   }
 
   &__details {
