@@ -1,0 +1,22 @@
+.story {
+  &__fig {
+    width: 9rem;
+    height: 9rem;
+    clip-path: circle();
+    float: left;
+
+    img {
+      height: 100%;
+      transform: translateX(-2rem);
+    }
+  }
+
+  &__text {
+  }
+
+  &__title {
+  }
+
+  &__details {
+  }
+}
