@@ -1,0 +1,92 @@
+.form {
+  width: 50%;
+  padding: 4rem 3rem;
+  font-size: 2rem;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__group {
+    margin-top: 1.5rem;
+  }
+
+  &__input {
+    font-size: 2rem;
+    width: 90%;
+    height: 6rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid transparent;
+    border-radius: 3px;
+    &:focus {
+      outline: none;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+      &:valid {
+        border-bottom: 3px solid $color-primary-light;
+      }
+      &:invalid {
+        border-bottom: 3px solid $color-secondary-dark;
+      }
+    }
+  }
+
+  &__label {
+    padding-left: 2rem;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5rem);
+    transition: all 1s;
+  }
+
+  &__input:focus + &__label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0rem);
+  }
+
+  &__group-radio {
+    position: relative;
+    display: inline-block;
+    width: 49%;
+  }
+  &-radio {
+    visibility: hidden;
+  }
+  &-radio:checked + &-radio-label > &__radio-button:after {
+    opacity: 1;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    display: inline-block;
+    width: 3rem;
+    border: 5px solid $color-primary-light;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    &:after {
+      content: '';
+      width: 1.3rem;
+      height: 1.3rem;
+      display: inline-block;
+      background-color: $color-primary-light;
+      border-radius: 50%;
+      position: absolute;
+      top: 3.9px;
+      left: 3.5px;
+      opacity: 0;
+    }
+  }
+  &-radio-label {
+    padding-left: 3rem;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    margin-top: 3rem;
+  }
+}

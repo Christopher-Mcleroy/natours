@@ -36,8 +36,8 @@ $utilities: (
 @each $class, $prop in $utilities {
   @each $size, $value in $spacers {
     .#{$class}-#{$size} {
-      @each $propertie in $prop {
-        #{$propertie}: $value;
+      @each $properties in $prop {
+        #{$properties}: $value;
       }
     }
   }
