@@ -1,15 +1,44 @@
 .u-text-center {
   text-align: center;
 }
-.u-margin-bottom-small {
-  margin-bottom: 2rem;
-}
-.u-margin-bottom-medium {
-  margin-bottom: 5rem;
-}
-.u-margin-bottom-large {
-  margin-bottom: 8rem;
-}
-.u-margin-top-large {
-  margin-top: 8rem;
+
+$spacers: (
+  0: 0,
+  1: 1rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem,
+  6: 6rem,
+  7: 7rem,
+  8: 8rem,
+  9: 9rem,
+  10: 10rem,
+);
+
+$utilities: (
+  m: margin,
+  mb: margin-bottom,
+  mt: margin-top,
+  mr: margin-right,
+  ml: margin-left,
+  mx: margin-left margin-right,
+  my: margin-top margin-bottom,
+  p: padding,
+  pb: padding-bottom,
+  pt: padding-top,
+  pr: padding-right,
+  pl: padding-left,
+  px: padding-right padding-left,
+  py: padding-top padding-bottom,
+);
+
+@each $class, $prop in $utilities {
+  @each $size, $value in $spacers {
+    .#{$class}-#{$size} {
+      @each $propertie in $prop {
+        #{$propertie}: $value;
+      }
+    }
+  }
 }
