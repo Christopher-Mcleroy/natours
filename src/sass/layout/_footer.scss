@@ -1,0 +1,44 @@
+.footer {
+  padding: 10rem 0;
+  background-color: #333;
+  color: #fff;
+
+  &__logo {
+    margin: 5rem;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    padding-top: 1rem;
+    border-top: 1px solid #666;
+    a {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        transform: scale(1.2) rotate(-30deg);
+        background-color: #333;
+        border-bottom: 1px solid #666;
+      }
+    }
+  }
+
+  &__info {
+    text-align: justify;
+    width: 41%;
+    float: right;
+    padding-top: 1rem;
+    border-top: 1px solid #666;
+  }
+}
