@@ -6,6 +6,11 @@
   box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
   background-color: rgba($color: $color-white, $alpha: 0.8);
 
+  @include media(tab-port) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   &__icon {
     font-size: 6rem;
     background-image: linear-gradient(

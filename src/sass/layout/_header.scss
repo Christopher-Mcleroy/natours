@@ -11,6 +11,11 @@
   position: relative;
   display: block;
 
+  @include media(tab-land) {
+    height: 90vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 80vh, 0 100%);
+  }
+
   &__logo-box {
     position: absolute;
     top: 4rem;

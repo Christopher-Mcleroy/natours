@@ -7,6 +7,15 @@
   transform: skewX(-9deg);
   box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.2);
 
+  @include media(phone) {
+    padding: 0 3rem;
+  }
+
+  @include media(tab-port) {
+    transform: skewX(0);
+    width: 100%;
+  }
+
   &__fig {
     width: 12rem;
     height: 12rem;
@@ -15,6 +24,14 @@
     shape-outside: circle();
     transform: translateX(-3rem);
     position: relative;
+
+    @include media(phone) {
+      width: 8rem;
+      height: 8rem;
+      float: none;
+      margin: 1rem auto;
+      transform: translateX(0);
+    }
 
     figcaption {
       color: white;
