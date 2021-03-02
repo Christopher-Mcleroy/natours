@@ -35,6 +35,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    @include media(tab-port) {
+      width: 2rem;
+    }
+
     &::before {
       content: '';
       display: inline-block;
@@ -44,6 +48,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, 1rem);
+
+      @include media(tab-port) {
+        width: 2rem;
+        transform: translate(-50%, 0.7rem);
+      }
     }
 
     &::after {
@@ -55,6 +64,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -1rem);
+
+      @include media(tab-port) {
+        width: 2rem;
+        transform: translate(-50%, -0.7rem);
+      }
     }
   }
 
@@ -69,6 +83,13 @@
     z-index: 2000;
     transition: all 0.2s;
     box-shadow: 0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
+
+    @include media(tab-port) {
+      top: 3rem;
+      right: 3rem;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -86,6 +107,13 @@
     background: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1000;
     transition: all 0.6s;
+
+    @include media(tab-port) {
+      top: 3rem;
+      right: 3rem;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
   }
 
   &__list {
@@ -104,7 +132,6 @@
     font-size: 4rem;
     text-decoration: none;
     margin-top: 2rem;
-
     background: linear-gradient(
       130deg,
       transparent,
@@ -113,8 +140,11 @@
       #eee
     );
     background-size: 225%;
-
     transition: all 0.4s;
+
+    @include media(tab-land) {
+      font-size: 2.5rem;
+    }
     &:hover {
       background-position: 100%;
       color: $color-primary-dark;
