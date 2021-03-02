@@ -4,6 +4,10 @@ body {
   line-height: 1.7;
   padding: 3rem;
   font-size: 1.6rem;
+
+  @include media(tab-land) {
+    padding: 0;
+  }
 }
 
 .heading-primary {
@@ -14,6 +18,16 @@ body {
     font-size: 6rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
+
+    @include media(tab-port) {
+      letter-spacing: 3rem;
+      font-size: 4rem;
+    }
+
+    @include media(phone) {
+      letter-spacing: 1rem;
+      font-size: 2.5rem;
+    }
   }
 
   &--sub {
@@ -24,6 +38,15 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     margin-bottom: 4rem;
+
+    @include media(tab-port) {
+      letter-spacing: 1.2rem;
+      font-size: 1.5rem;
+    }
+    @include media(phone) {
+      letter-spacing: 1rem;
+      font-size: 1rem;
+    }
   }
 }
 
@@ -32,7 +55,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  display: inline-block;
+  display: block;
   background-image: linear-gradient(
     to right,
     $color-primary-light,
@@ -44,6 +67,12 @@ body {
   &:hover {
     transform: skewX(15deg) skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color: $color-black, $alpha: 0.4);
+  }
+  @include media(tab-land) {
+    font-size: 3rem;
+  }
+  @include media(phone) {
+    font-size: 2rem;
   }
 }
 

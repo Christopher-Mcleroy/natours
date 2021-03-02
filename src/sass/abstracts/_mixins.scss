@@ -5,3 +5,21 @@
     display: table;
   }
 }
+
+@mixin media($screen) {
+  @if ($screen == tab-land) {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if ($screen == tab-port) {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  }
+  @if ($screen == phone) {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  }
+}

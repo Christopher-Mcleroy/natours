@@ -11,6 +11,10 @@
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+
+    @include media(phone) {
+      padding: 1rem 2rem;
+    }
   }
 
   &:hover {
