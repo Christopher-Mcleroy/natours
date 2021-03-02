@@ -4,14 +4,19 @@
   margin: 0 auto;
   @include clearfix;
 
-  &:not(:last-child) {
-    margin-bottom: $grid-bottom-margin;
+  @include media(tab-land) {
+    max-width: 850px;
   }
 
-  [class^='col-'] {
-    float: left;
-    &:not(:last-child) {
-      margin-right: $grid-gutter;
+  @include media(tab-port) {
+    max-width: 600px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $grid-bottom-margin;
+
+    @include media(tab-port) {
+      margin-bottom: 2rem;
     }
   }
 
@@ -37,5 +42,26 @@
 
   .col-3-4 {
     width: calc(((100% - #{$grid-gutter} * 3) / 4) * 3 + #{$grid-gutter} * 2);
+  }
+
+  & [class^='col-'] {
+    float: left;
+    &:not(:last-child) {
+      margin-right: $grid-gutter;
+
+      @include media(tab-port) {
+        margin-right: 0;
+      }
+    }
+
+    @include media(tab-port) {
+      float: none;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    @include media(phone) {
+      margin-bottom: 0;
+    }
   }
 }
